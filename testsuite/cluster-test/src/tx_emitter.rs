@@ -145,11 +145,11 @@ impl TxEmitter {
             }
         };
         let num_clients = req.instances.len() * threads_per_ac;
-        info!(
-            "Will use {} threads per AC with total {} AC clients",
-            threads_per_ac, num_clients
-        );
         let num_accounts = req.accounts_per_client * num_clients;
+        info!(
+            "Will use {} threads per AC with total {} AC clients and create a total of {} accounts",
+            threads_per_ac, num_clients, num_accounts
+        );
         self.mint_accounts(&req, num_accounts).await?;
         let all_accounts = self.accounts.split_off(self.accounts.len() - num_accounts);
         let mut workers = vec![];
