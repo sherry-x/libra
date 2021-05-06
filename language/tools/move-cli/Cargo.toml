@@ -33,7 +33,7 @@ read-write-set = { path = "../read-write-set" }
 resource-viewer = { path = "../resource-viewer" }
 move-binary-format = { path = "../../move-binary-format" }
 vm-genesis = { path = "../vm-genesis" }
-walkdir = "2.3.1"
+walkdir = "2.3.2"
 
 [dev-dependencies]
 datatest-stable = "0.1.1"
